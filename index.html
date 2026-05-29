@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>2026 World Cup Predictor / 2026世界杯预测器</title>
 
 <!-- ─── SEO + Social meta ───────────────────────────────────────────── -->
@@ -15,10 +15,10 @@
 
 <!-- Open Graph (Facebook / WeChat / weibo link card) -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://worldcup-jizhengliang.netlify.app/">
+<meta property="og:url" content="https://gmliangjz.github.io/WorldCup2026/">
 <meta property="og:title" content="2026 世界杯预测器 · FIFA World Cup 2026 Predictor">
 <meta property="og:description" content="48 队完整模拟 · 528 球员花名册 · 一键生成香槟金冠军预测海报">
-<meta property="og:image" content="https://worldcup-jizhengliang.netlify.app/og-image.png">
+<meta property="og:image" content="https://gmliangjz.github.io/WorldCup2026/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_CN">
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="2026 World Cup Predictor · 2026 世界杯预测器">
 <meta name="twitter:description" content="48 teams · 528 player roster · one-click champagne-gold champion poster">
-<meta name="twitter:image" content="https://worldcup-jizhengliang.netlify.app/og-image.png">
+<meta name="twitter:image" content="https://gmliangjz.github.io/WorldCup2026/og-image.png">
 <!-- ──────────────────────────────────────────────────────────────────── -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,17 +48,17 @@
   color-scheme:light;
 }
 body.dark{
-  /* Gemini-style: pure black paper, near-invisible card lift, soft silver text */
-  --bg-paper:#000000;--bg-card:#0A0A0C;--bg-soft:#141416;--bg-input:#141416;
-  --ink-dark:#E4E4E7;--ink-medium:#A1A1AA;--ink-light:#5A5A63;--ink-fade:#3F3F47;
-  --line-delicate:#1C1C1F;
-  --accent-brand:#E4E4E7;--accent-success:#10B981;--accent-danger:#F87171;
-  --accent-purple:#9FA3D9;--accent-blue:#60A5FA;--accent-gold:#E5B547;--accent-gold-dark:#F2C969;
-  --row-gold-bg:rgba(229,181,71,0.08);--row-blue-bg:rgba(96,165,250,0.08);
-  --row-q1-bg:rgba(255,255,255,0.02);--row-q3-bg:rgba(248,113,113,0.04);
-  --shimmer-base:#141416;--shimmer-peak:#1F1F22;
-  --shadow-float:0 0 0 1px rgba(255,255,255,0.04);
-  --shadow-card:0 0 0 1px rgba(255,255,255,0.04);
+  /* v2: deep forest green + champagne gold, matched to the share poster (#07110C base / #E5C26A gold) */
+  --bg-paper:#07110C;--bg-card:#0C1A12;--bg-soft:#11211A;--bg-input:#11211A;
+  --ink-dark:#ECEFE8;--ink-medium:#9CB0A4;--ink-light:#5F7468;--ink-fade:#3B4A41;
+  --line-delicate:#1B2C22;
+  --accent-brand:#ECEFE8;--accent-success:#34D399;--accent-danger:#F87171;
+  --accent-purple:#9FA3D9;--accent-blue:#60A5FA;--accent-gold:#E5C26A;--accent-gold-dark:#EBD493;
+  --row-gold-bg:rgba(229,194,106,0.10);--row-blue-bg:rgba(96,165,250,0.07);
+  --row-q1-bg:rgba(255,255,255,0.02);--row-q3-bg:rgba(248,113,113,0.05);
+  --shimmer-base:#11211A;--shimmer-peak:#182D22;
+  --shadow-float:0 0 0 1px rgba(229,194,106,0.07);
+  --shadow-card:0 0 0 1px rgba(229,194,106,0.07);
   color-scheme:dark;
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -119,7 +119,7 @@ body.dark .play-mode.chaos::before{background:linear-gradient(135deg,rgba(180,90
 .play-mode button.on{color:var(--ink-dark)}
 body.dark .play-mode{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08);box-shadow:inset 0 1px 0 rgba(255,255,255,0.04),0 8px 24px rgba(0,0,0,0.18)}
 body.dark .play-mode::before{background:rgba(255,255,255,0.11);box-shadow:inset 0 1px 0 rgba(255,255,255,0.14),0 8px 20px rgba(0,0,0,0.22)}
-body.dark .btn-rand{background:linear-gradient(180deg,#2A2A30,#1F1F23);color:var(--ink-dark);box-shadow:0 4px 12px rgba(0,0,0,0.4),inset 0 1px 0 rgba(255,255,255,0.06);border:1px solid #2F2F35}
+body.dark .btn-rand{background:linear-gradient(180deg,#16291D,#0E1C14);color:var(--ink-dark);box-shadow:0 4px 12px rgba(0,0,0,0.4),inset 0 1px 0 rgba(229,194,106,0.10);border:1px solid #24382B}
 body.dark .btn-reset{background:transparent;color:var(--ink-medium);border:1px solid var(--line-delicate)}
 body.dark .btn-reset:hover{background:var(--bg-soft);color:var(--ink-dark)}
 .topbar button:active{transform:scale(0.95)}
@@ -258,6 +258,8 @@ body.dark .tabs button.on{background:rgba(255,255,255,0.08);color:var(--ink-dark
 .tabs button{display:flex;align-items:center;gap:8px}
 .tabs button svg{width:16px;height:16px;transition:transform 0.3s ease}
 .tabs button.on svg{transform:scale(1.15);color:var(--ink-dark)}
+/* Narrow screens: drop tab icons so longer EN labels (e.g. "Group Stage") don't crowd */
+@media(max-width:520px){.tabs button svg{display:none}.tabs button{gap:0}}
 /* Ambient glow on flags */
 .fl,.fls{filter:drop-shadow(0 3px 5px rgba(0,0,0,0.1));transition:filter 0.3s ease}
 /* Skeleton shimmer for waiting bracket slots */
@@ -272,23 +274,7 @@ body.dark .tabs button.on{background:rgba(255,255,255,0.08);color:var(--ink-dark
 .toast.show{opacity:1;transform:translate(-50%,0)}
 body.dark .toast{background:rgba(255,255,255,0.9);color:#121417}
 
-/* Export poster state - ultimate fix */
-.exporting-image{background:var(--bg-paper)!important;width:max-content!important;min-width:100%!important}
-.exporting-image .main,.exporting-image .bk-wrap{overflow:visible!important;width:max-content!important;max-width:none!important}
-.exporting-image .tabs,.exporting-image .topbar,.exporting-image .mode-row,.exporting-image .status,.exporting-image .btns,.exporting-image .bk-act,.exporting-image .split-right,.exporting-image .match-inline,.exporting-image #modal-root,.exporting-image .info-ctrl,.exporting-image .topbar-ctrl,.exporting-image [style*="position:fixed"]{display:none!important}
-.exporting-image .hdr{padding:60px 40px 40px!important;background:transparent!important}
-.exporting-image .hdr h1{font-size:36px!important}
-.exporting-image .main{padding:0 40px 60px!important}
-.exporting-image .bk{min-width:auto!important}
-.share-footer{display:none}
-.exporting-image .share-footer{display:flex;align-items:center;justify-content:space-between;margin-top:60px;padding:30px 40px 0;border-top:2px dashed var(--line-delicate,#C8CCD4);width:100%}
-.share-footer-left h4{font-size:22px;font-weight:800;color:var(--ink-dark,#121417);margin-bottom:6px;letter-spacing:-0.5px}
-.share-footer-left p{font-size:15px;color:var(--ink-medium,#5E636E);font-weight:500;margin:0}
-.share-footer-qr{width:96px;height:96px;border-radius:12px;background:#fff;border:1px solid var(--line-delicate,#ccc);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--ink-light,#999);text-align:center;padding:8px;line-height:1.3;font-weight:600;overflow:hidden}
-.share-footer-qr .qr-grid{display:grid;width:100%;height:100%;background:#fff;grid-auto-rows:1fr}
-.share-footer-qr .qr-grid i{display:block;background:#fff}
-.share-footer-qr .qr-grid i.on{background:#111}
-.share-footer-qr .qr-fallback{font-size:10px;line-height:1.25;word-break:break-word}
+/* (Removed dead .exporting-image + .share-footer rules — old full-page-screenshot share, replaced by the off-screen SHARE POSTER below.) */
 
 /* ─── SHARE POSTER ─── */
 /* Off-screen render target: 540×810 base + html2canvas scale:2 → 1080×1620 PNG.
@@ -513,12 +499,7 @@ body.view-mode .mode-row{margin:18px 0 24px!important}
   <div class="sub" data-i18n="hosts">🇺🇸 美国 · 🇲🇽 墨西哥 · 🇨🇦 加拿大</div>
 </div>
 <div class="tabs" id="tabs"></div>
-<div class="main" id="app"></div>
-<div class="share-footer" id="shareFooter">
-<div class="share-footer-left"><h4 data-i18n="shareTitle">这是我的2026世界杯预测</h4><p data-i18n="shareDesc">访问 worldcup-jizhengliang.netlify.app 创建你的预测</p></div>
-<div class="share-footer-qr" id="shareQR" aria-label="QR code"><span class="qr-fallback" data-i18n="shareQR">扫码预测</span></div>
-</div>
-<div class="toast" id="toast"></div>
+<div class="main" id="app"></div><div class="toast" id="toast"></div>
 <div id="modal-root"></div>
 <div class="info-ctrl" tabindex="0" aria-label="How to play">
   <div class="info-dot">i</div>
@@ -1277,9 +1258,7 @@ var I18N={
     noScorerData:"暂无数据 — 比赛中点 ⚽ 记录进球",noAssistData:"暂无数据",
     posForward:"前锋",posMid:"中前卫",posDef:"后卫",posGK:"门将",
     champRouteTitle:"{champ} 的夺冠之路",routeWin:"胜",routeEmpty:"暂无路径数据",
-    t3Title:"🏅 第三名排名（前8名晋级32强）",pts:"分",
-    shareTitle:"这是我的2026世界杯预测",shareDesc:"访问 worldcup-jizhengliang.netlify.app 创建你的预测",shareQR:"扫码预测",
-    groupPrefix:"{g}组",
+    t3Title:"🏅 第三名排名（前8名晋级32强）",pts:"分",    groupPrefix:"{g}组",
     goalsRemain:"⚽ 还需记录 {rem} / {total} 个进球",
     loadingPhotos:"加载球员照片中...",
     teamRoster:"{team} 球员阵容",
@@ -1331,9 +1310,7 @@ var I18N={
     noScorerData:"No data yet — tap ⚽ in a match to log goals",noAssistData:"No data yet",
     posForward:"FW",posMid:"MF",posDef:"DF",posGK:"GK",
     champRouteTitle:"{champ}'s Path to Glory",routeWin:"beat",routeEmpty:"No path data",
-    t3Title:"🏅 Third Place Standings (top 8 advance to R32)",pts:"pts",
-    shareTitle:"My 2026 World Cup prediction",shareDesc:"Visit worldcup-jizhengliang.netlify.app to make yours",shareQR:"Scan to predict",
-    groupPrefix:"Group {g}",
+    t3Title:"🏅 Third Place Standings (top 8 advance to R32)",pts:"pts",    groupPrefix:"Group {g}",
     goalsRemain:"⚽ {rem} / {total} goals left to log",
     loadingPhotos:"Loading player photos...",
     teamRoster:"{team} squad",
@@ -2082,7 +2059,7 @@ function revealChampionPath(){
 }
 
 // ── SHARE QR + CARD GENERATOR ──
-var SHARE_QR_URL="https://worldcup-jizhengliang.netlify.app/";
+var SHARE_QR_URL="https://gmliangjz.github.io/WorldCup2026/";
 function qrBytes(s){
   if(typeof TextEncoder!=="undefined")return Array.prototype.slice.call(new TextEncoder().encode(s));
   var out=[];for(var i=0;i<s.length;i++)out.push(s.charCodeAt(i)&255);return out;
@@ -2292,23 +2269,14 @@ function buildPosterHTML(champ){
   h+='<div class="poster-conclusion" style="font-size:'+tlFont+'px">'+escHtml(tagline)+'</div>';
   h+='<div class="poster-footer">';
   h+='<div class="footer-left">';
-  h+='<div class="footer-url">worldcup-jizhengliang.netlify.app</div>';
+  h+='<div class="footer-url">gmliangjz.github.io/WorldCup2026</div>';
   h+='<div class="footer-notice">'+escHtml(footerNotice)+'</div>';
   h+='</div>';
   h+='<div class="footer-right">'+qrHTML+'</div>';
   h+='</div>';
   h+='</div>';
   return h;
-}
-function renderShareQR(){
-  var el=document.getElementById("shareQR");
-  if(!el)return;
-  var url=getShareUrl();
-  el.setAttribute("title",url);
-  try{el.innerHTML=makeQRHTML(url);}
-  catch(e){el.innerHTML='<span class="qr-fallback">'+T("shareQR")+'</span>';}
-}
-function genShareCard(){
+}function genShareCard(){
   var mr=document.getElementById("modal-root");
   // Require completed knockout (FINAL must have a winner)
   var champ=(ko&&ko.FINAL)?ko.FINAL.w:null;
@@ -2405,10 +2373,10 @@ function skipSong(){
   loadSong(currentSong);
   if(wasPlaying)playCurrent();
 }
-// Music plays only when user clicks the music button (toggleMusic).
-// Preload the first track so the first click starts instantly, and wire up auto-next on song end.
+// Music plays only when the user clicks the music button (toggleMusic). Nothing is fetched on load
+// (preload="none" + no loadSong here) so the public build makes zero 404s, matching assets/README.
+// Just wire up auto-next on song end; the first click lazily loads track 0 via toggleMusic.
 document.addEventListener("DOMContentLoaded",function(){
-  loadSong(0);
   var audio=document.getElementById("bgMusic");
   if(audio){audio.addEventListener("ended",function(){currentSong=(currentSong+1)%playlist.length;loadSong(currentSong);playCurrent();});}
 });
