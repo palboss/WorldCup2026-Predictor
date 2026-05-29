@@ -172,7 +172,7 @@ Each champion tier triggers an original Chinese commentary-style tagline, with a
 
 ### 📄 License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE). Third-party assets (flags, photos, taglines): [NOTICE](NOTICE.md).
 
 ---
 
@@ -293,7 +293,7 @@ python -m http.server 8000   # 或：npx serve
 
 ### 📄 License
 
-MIT — 详见 [LICENSE](LICENSE)。
+MIT — 详见 [LICENSE](LICENSE)。第三方素材（旗帜 / 头像 / 解说词）声明见 [NOTICE](NOTICE.md)。
 
 ---
 
