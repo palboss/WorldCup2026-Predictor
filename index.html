@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -510,7 +510,7 @@ body.view-mode .mode-row{margin:18px 0 24px!important}
 <div class="topbar-ctrl">
 <button class="ctrl-icon" id="skipBtn" onclick="skipSong()" title="Skip track">⏭</button>
 <button class="ctrl-icon music" id="musicBtn" onclick="toggleMusic()" title="Play / Pause"></button>
-<button class="ctrl-icon lang" id="langBtn" onclick="toggleLang()" title="Language / 语言">ZH</button>
+<button class="ctrl-icon lang" id="langBtn" onclick="toggleLang()" title="Language / 语言">EN</button>
 <button class="ctrl-icon" id="themeBtn" onclick="toggleTheme()" title="Toggle theme">🌙</button>
 </div>
 <audio id="bgMusic" preload="none"></audio>
@@ -1222,7 +1222,7 @@ applyTheme();
 // Persisted to localStorage; on first visit detects browser language.
 // Default language: English (GitHub-facing audience is mostly international).
 // Returning visitors keep their saved choice via localStorage.
-var LANG=localStorage.getItem("wc26_lang")||"en";
+var LANG=localStorage.getItem("wc26_lang")||"zh";
 document.documentElement.lang=(LANG==="zh")?"zh-CN":"en";
 var I18N={
   zh:{
